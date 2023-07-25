@@ -1,8 +1,11 @@
 module go-exporter
 
-go 1.20
+go 1.18
 
-require github.com/prometheus/client_golang v1.16.0
+require (
+	github.com/prometheus/client_golang v1.16.0
+	github.com/robfig/cron v1.2.0
+)
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
