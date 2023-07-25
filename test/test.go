@@ -3,6 +3,7 @@ package test
 import (
 	"go-exporter/counter"
 	"go-exporter/gauge"
+	"go-exporter/histogram"
 	"time"
 )
 
@@ -13,6 +14,7 @@ func Test() {
 		//counter测试数据
 		counter.Test()
 		gauge.Test()
+		histogram.Test()
 		time.Sleep(5 * time.Second)
 	}
 }

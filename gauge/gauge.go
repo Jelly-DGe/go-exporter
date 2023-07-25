@@ -6,6 +6,7 @@ import (
 	"time"
 )
 
+//无指标写法
 var gauge = prometheus.NewGauge(
 	prometheus.GaugeOpts{
 		Name: "jelly_test_gauge",
