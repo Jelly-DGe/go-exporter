@@ -1,0 +1,16 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: go-exporter-monitoring
+  namespace: monitoring
+spec:
+  jobLabel: go-exporter
+  endpoints:
+    - interval: 10s
+      port: go-exporter-metrics  #svc中的port名称一致
+  namespaceSelector:
+    matchNames:
+      - kube-system  #指定ns
+  selector:
+    matchLabels:
+      app: go-exporter  #svc中的label一致，用于选择svc
