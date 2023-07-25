@@ -4,6 +4,7 @@ import (
 	"go-exporter/counter"
 	"go-exporter/gauge"
 	"go-exporter/histogram"
+	"go-exporter/summary"
 	"time"
 )
 
@@ -15,6 +16,7 @@ func Test() {
 		counter.Test()
 		gauge.Test()
 		histogram.Test()
+		summary.Test()
 		time.Sleep(5 * time.Second)
 	}
 }
